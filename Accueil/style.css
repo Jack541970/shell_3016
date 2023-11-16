@@ -1,0 +1,387 @@
+/* ----------------------------- GENERAL ---------------------------------*/
+
+* {
+  margin: 0;
+  /* padding: 0; */
+  scrollbar-color: transparent transparent;
+  /* thumb and track color */
+  scrollbar-width: 0px;
+}
+
+*::-webkit-scrollbar {
+  width: 0;
+}
+
+/* ----------------------------- Barre Nav ---------------------------------*/
+
+
+/* <!-- menu du burger --> */
+
+@media ((max-width: 500px)) {}
+
+@media ((min-width: 500px) and (max-width: 1000px)) {}
+
+
+/* .nav-link {
+  padding: 0;
+} */
+
+.nav-link a {
+  text-decoration: none;
+  font-family: 'Poppins', 'Arial Narrow', Arial, sans-serif;
+  color: white;
+  font-size: 1em;
+  text-transform: uppercase;
+  list-style: none;
+}
+
+/* #navlink:active {
+  background-color: #3367c4;
+} */
+
+#pop li a:hover {
+  color: #3e0610; 
+  box-shadow: 0 1px 1px black;
+  padding: 5px;
+
+}
+
+/* .navdeux {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  text-decoration: none;
+  position: absolute;
+
+} */
+
+.menupop {
+  position: absolute;
+  top: 15px;
+  right: 0;
+  background-color: #fcce07;
+  width: 20%;
+  padding: 5% 5% 30px 5%;
+  border-radius: 20px;
+  transform: translateX(500px);
+  transition: 1s ease-out;
+  position: absolute;
+}
+
+.menupop li {
+  text-decoration: none;
+  font-family: 'Poppins', 'Arial Narrow', Arial, sans-serif;
+  color: white;
+  font-size: 1em;
+  text-transform: uppercase;
+  margin-top: 6px;
+  list-style: none;
+}
+
+
+/* Style du conteneur du menu burger */
+.menu-wrapper {
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  text-decoration: none;
+  position: absolute;
+  top: 24px;
+  left: 95%;
+}
+
+/* Style de l'icône du menu burger (les trois lignes) */
+.burger-icon .line {
+  width: 30px;
+  height: 4px;
+  background-color: #ffffff;
+  margin: auto;
+  margin-top: 6px;
+}
+
+
+/* <!-- barre nav --> */
+
+header {
+  display: flex;
+  width: 100%;
+  height: 7em;
+  background-color: teal;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#logo {
+  display: flex;
+  width: 100px;
+  height: 85px;
+}
+
+.societe {
+  display: flex;
+  font-size: 2em;
+}
+
+
+
+.navlist {
+  display: flex;
+}
+
+.navlist li {
+  margin-left: 50PX;
+  list-style: none;
+}
+
+.navlist li a {
+  text-decoration: none;
+  font-style: none;
+  text-transform: uppercase;
+} 
+
+/* ----------------------------- Bande de message securite --------------------*/
+
+
+#lastAccidentDate {
+  display: none;
+}
+
+
+
+/* ----------------------------- Articles/box ---------------------------------*/
+.conteneur-flex {
+  display: flex;
+  /* justify-content: space-between; */
+  width: 100%;
+  height: 35em;
+  background-color: #ed1c24;
+  flex-direction: column;
+  /* align-items: center; */
+
+}
+
+.picto {
+  width: 14%;
+  height: 15em;
+  background-color: blanchedalmond;
+  margin-top: 25px;
+  margin-left: 25px;
+  border-radius: 5px;
+}
+
+
+.conteneur-groupe {
+  display: flex;
+  justify-content: center;
+
+}
+
+.ico1 {
+  width: 55%;
+  height: 40%;
+  margin-left: 10%;
+  margin-top: 10%;
+}
+
+#bt2,
+#bt3,
+#bt4,
+#bt5,
+#bt6,
+#bt7,
+#bt8,
+#bt9 {
+  border-radius: 5px;
+  background-color: #ffd500;
+}
+
+
+#bt2:hover,
+#bt3:hover,
+#bt4:hover,
+#bt5:hover,
+#bt6:hover,
+#bt7:hover,
+#bt8:hover,
+#bt9:hover {
+  background-color: #ed1c24;
+}
+
+/* ----------------------------- Formulaire de message ---------------------------------*/
+
+/* Style du formulaire */
+.form {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #ffd500;
+}
+
+/* Style des labels */
+.form label {
+  display: block;
+  margin-bottom: 5px;
+
+}
+
+/* Style des champs de texte */
+.form input[type="text"],
+.form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  resize: none;
+}
+
+.form input[type="password"],
+.form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  resize: none;
+}
+
+
+
+.form input[type="text"]:focus,
+.form textarea:focus {
+  border-color: green;
+  /* Couleur de la bordure de sélection en vert */
+  outline: 2px solid green;
+  /* Bordure d'accentuation en vert */
+}
+
+.form input[type="password"]:focus,
+.form textarea:focus {
+  border-color: green;
+  /* Couleur de la bordure de sélection en vert */
+  outline: 2px solid green;
+  /* Bordure d'accentuation en vert */
+}
+
+
+
+/* Style du bouton */
+.form button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Style du bouton au survol */
+.form button:hover {
+  background-color: teal;
+}
+
+/* Alignement du bouton */
+.form button#Envoye {
+  margin-top: 10px;
+}
+
+/* Alignement des éléments dans la dernière div */
+.form div:last-child {
+  text-align: center;
+}
+
+
+/* ----------------------------- Footer ---------------------------------*/
+
+
+/* .form div {
+  display: flex;} */
+
+
+#end {
+
+  height: 200px;
+  width: 100%;
+  background-color: #2C2C2C;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: white;
+  padding-top: 3em;
+}
+
+.cb {
+  margin-left: 200px;
+}
+
+.txt_footer {
+  margin-top: 0px;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: white;
+  font-family: 'poppins';
+
+}
+
+.thins_txt {
+  font-weight: 100;
+  font-family: 'poppins';
+}
+
+/* -----------------------------Pages de fichier BDD  ---------------------------------*/
+
+/* .titre_page {
+
+  margin-top: 0px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: black;
+  font-family: 'poppins';f
+
+} */
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-container button {
+  background-color: yellow;
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.button-container button:hover {
+  background-color: #ed1c24;
+}
+
+.button-container button a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.ligne-rouge {
+  border-bottom: 2px solid #ed1c24;
+  width: 100%;
+  display: inline-block;
+}
+
+.titre_marge-gauche {
+  margin-left: 250px;
+}
+
+.titre_marge-droite {
+  margin-right: 50px;
+}
+
+/* -----------------------------P ---------------------------------*/
