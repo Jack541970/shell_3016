@@ -64,20 +64,19 @@ texteDeroulant($texte, $vitesse);
 <!-- _______________________________________Wrapper/Pictogrammes___________________________________ -->
 
 
+
+<!-- _______________________________________Pictogramme Accidents___________________________________ -->
 <article class="conteneur-flex">
   <div class="conteneur-groupe">
-    <div class="picto"
-      style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 41vh;">
-      <p style="margin-top:20px;margin-bottom:20px; color: #008080;">ACCIDENTS</p>
-      
-      <!-- <p style="color: #008080;">ACCIDENTS</p> -->
-      <img class="ico1" style="margin: 0px 0; width: 100px; height: 100px;" src="../Resources PGM/Icones/RH.png" alt="">
-      <p style="margin: 5px;">Evalue la criticité des produits chimiques utilisées par l'entreprise
-      </p>
-      <button id="bt2" style="margin-top:15px;">ACCIDENTS</button>
-
+    <div class="picto">
+      <P style="margin-left:45px; color:#008080">ACCIDENTS</P>
+      <img class="ico1" style="margin-top:22px; margin-bottom:0px; margin-left:40px; "
+        src="../Resources PGM/Icones/images accidents 1.png" alt="">
+      <p style="margin-bottom:22px">Gestion administrative des accidents de travail et de trajet</p>
 
       <?php if (isset($_SESSION['user']) && (intval($_SESSION['user']['role']) === 1 || intval($_SESSION['user']['role']) === 2 || intval($_SESSION['user']['role']) === 3)): ?>
+
+        <button id="bt2" style="margin-left:42px;margin-top:9px">ACCIDENTS</button>
 
       <?php endif; ?>
 
@@ -92,194 +91,187 @@ texteDeroulant($texte, $vitesse);
       </script>
     </div>
 
-    <div class="picto"
-      style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 41vh;">
-      <p style="margin-top:20px;margin-bottom:0px; color: #008080;">ACCIDENTS</p>
-      <p style="color: #008080;">ACCIDENTS</p>
-      <!-- <p style="color: #008080;">ACCIDENTS</p> -->
-      <img class="ico1" style="margin: 0px 0; width: 100px; height: 100px;" src="../Resources PGM/Icones/RH.png" alt="">
-      <p style="margin: 5px;">Evalue la criticité des produits chimiques utilisées par l'entreprise + fiches de sécurité
-      </p>
-      <button id="bt2" style="margin: 5px;">ACCIDENTS</button>
+    <!-- _______________________________________Pictogramme Ressources Humaines___________________________________ -->
 
+
+    <div class="picto">
+      <span style="margin-left: 35px; color:#008080">RESSOURCES</span>
+      <span style="margin-left: 44px;color:#008080">HUMAINES</span>
+      <img class="ico1" style="margin-top:5px;margin-left:40px;" src="../Resources PGM/Icones/entreprise 1.png" alt="">
+      <p style="margin-bottom:10px">Délégation Personnel/Planning/Visite
+        Medicale/Formation/Recap. Maladie</p>
 
       <?php if (isset($_SESSION['user']) && (intval($_SESSION['user']['role']) === 1 || intval($_SESSION['user']['role']) === 2 || intval($_SESSION['user']['role']) === 3)): ?>
+
+        <button id="bt3" style="margin-left:6px">RESSOURCES_HUMAINES</button>
 
       <?php endif; ?>
 
       <script>
         document.addEventListener("DOMContentLoaded", function () {
-          var button = document.getElementById("bt2");
+          var button = document.getElementById("bt3");
 
           button.addEventListener("click", function () {
-            window.location.href = "../Accidents/view_files.php"; //URL pour le lien
+            window.location.href =
+              "../ressources_humaines/view_files.php"; //URL pour le lien
           });
         });
       </script>
+
+
+
+
+      <!-- _______________________________________Pictogramme Entreprises___________________________________ -->
     </div>
-
-    <div class="picto"
-      style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 41vh;">
-      <p style="margin-top:20px;margin-bottom:0px; color: #008080;">ACCIDENTS</p>
-      <p style="color: #008080;">ACCIDENTS</p>
-      <!-- <p style="color: #008080;">ACCIDENTS</p> -->
-      <img class="ico1" style="margin: 0px 0; width: 100px; height: 100px;" src="../Resources PGM/Icones/RH.png" alt="">
-      <p style="margin: 5px;">Evalue la criticité des produits chimiques utilisées par l'entreprise + fiches de sécurité
-      </p>
-      <button id="bt2" style="margin: 5px;">ACCIDENTS</button>
-
+    <div class="picto">
+      <P style="margin-left:45px; color:#008080">ENTREPRISE</P>
+      <img class="ico1" style="margin-top:22px; margin-bottom:22px; margin-left:40px; "
+        src="../Resources PGM/Icones/RH.png" alt="">
+      <p style="margin-left:10px">Information liées à l'entreprise et à son bon fonctionnement</p>
 
       <?php if (isset($_SESSION['user']) && (intval($_SESSION['user']['role']) === 1 || intval($_SESSION['user']['role']) === 2 || intval($_SESSION['user']['role']) === 3)): ?>
+
+        <button id="bt4" style="margin-left:42px; margin-top:9px">ENTREPRISE</button>
+
+      <?php endif; ?>
+
+    </div>
+
+    <!-- _______________________________________Pictogramme Santé et Securité___________________________________ -->
+    <div class="picto">
+      <P style="margin-left:50px; color:#008080">SANTE ET SECURITE</P>
+      <img class="ico1" style="margin-top:6px; margin-bottom:0px; margin-left:40px; "
+        src="../Resources PGM/Icones/sante et securite.png" alt="">
+      <p style="margin-bottom: 28px;"> Iventaires des postes à risques et de l'evaluation des risques</p>
+
+      <?php if (isset($_SESSION['user']) && (intval($_SESSION['user']['role']) === 1 || intval($_SESSION['user']['role']) === 2 || intval($_SESSION['user']['role']) === 3)): ?>
+
+        <button id="bt5" style="margin-left:20px">SANTE ET SECURITE</button>
 
       <?php endif; ?>
 
       <script>
         document.addEventListener("DOMContentLoaded", function () {
-          var button = document.getElementById("bt2");
+          var button = document.getElementById("bt5");
 
           button.addEventListener("click", function () {
-            window.location.href = "../Accidents/view_files.php"; //URL pour le lien
+            window.location.href =
+              "../Sante_et_securite/view_files.php"; //URL pour le lien
           });
         });
       </script>
-    </div>
 
-    <div class="picto"
-      style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 41vh;">
-      <p style="margin-top:20px;margin-bottom:0px; color: #008080;">ACCIDENTS</p>
-      <p style="color: #008080;">ACCIDENTS</p>
-      <!-- <p style="color: #008080;">ACCIDENTS</p> -->
-      <img class="ico1" style="margin: 0px 0; width: 100px; height: 100px;" src="../Resources PGM/Icones/RH.png" alt="">
-      <p style="margin: 5px;">Evalue la criticité des produits chimiques utilisées par l'entreprise + fiches de sécurité
-      </p>
-      <button id="bt2" style="margin: 5px;">ACCIDENTS</button>
-
-
-      <?php if (isset($_SESSION['user']) && (intval($_SESSION['user']['role']) === 1 || intval($_SESSION['user']['role']) === 2 || intval($_SESSION['user']['role']) === 3)): ?>
-
-      <?php endif; ?>
-
-      <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          var button = document.getElementById("bt2");
-
-          button.addEventListener("click", function () {
-            window.location.href = "../Accidents/view_files.php"; //URL pour le lien
-          });
-        });
-      </script>
-    </div>
-    </div>
-
-    <div class="conteneur-groupe">
-    <div class="picto"
-      style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 41vh;">
-      <p style="margin-top:20px;margin-bottom:0px; color: #008080;">ACCIDENTS</p>
-      <p style="color: #008080;">ACCIDENTS</p>
-      <!-- <p style="color: #008080;">ACCIDENTS</p> -->
-      <img class="ico1" style="margin: 0px 0; width: 100px; height: 100px;" src="../Resources PGM/Icones/RH.png" alt="">
-      <p style="margin: 5px;">Evalue la criticité des produits chimiques utilisées par l'entreprise + fiches de sécurité
-      </p>
-      <button id="bt2" style="margin: 5px;">ACCIDENTS</button>
-
-
-      <?php if (isset($_SESSION['user']) && (intval($_SESSION['user']['role']) === 1 || intval($_SESSION['user']['role']) === 2 || intval($_SESSION['user']['role']) === 3)): ?>
-
-      <?php endif; ?>
-
-      <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          var button = document.getElementById("bt2");
-
-          button.addEventListener("click", function () {
-            window.location.href = "../Accidents/view_files.php"; //URL pour le lien
-          });
-        });
-      </script>
-    </div>
-
-    <div class="picto"
-      style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 41vh;">
-      <p style="margin-top:20px;margin-bottom:0px; color: #008080;">ACCIDENTS</p>
-      <p style="color: #008080;">ACCIDENTS</p>
-      <!-- <p style="color: #008080;">ACCIDENTS</p> -->
-      <img class="ico1" style="margin: 0px 0; width: 100px; height: 100px;" src="../Resources PGM/Icones/RH.png" alt="">
-      <p style="margin: 5px;">Evalue la criticité des produits chimiques utilisées par l'entreprise + fiches de sécurité
-      </p>
-      <button id="bt2" style="margin: 5px;">ACCIDENTS</button>
-
-
-      <?php if (isset($_SESSION['user']) && (intval($_SESSION['user']['role']) === 1 || intval($_SESSION['user']['role']) === 2 || intval($_SESSION['user']['role']) === 3)): ?>
-
-      <?php endif; ?>
-
-      <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          var button = document.getElementById("bt2");
-
-          button.addEventListener("click", function () {
-            window.location.href = "../Accidents/view_files.php"; //URL pour le lien
-          });
-        });
-      </script>
-    </div>
-
-    <div class="picto"
-      style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 41vh;">
-      <p style="margin-top:20px;margin-bottom:0px; color: #008080;">ACCIDENTS</p>
-      <p style="color: #008080;">ACCIDENTS</p>
-      <!-- <p style="color: #008080;">ACCIDENTS</p> -->
-      <img class="ico1" style="margin: 0px 0; width: 100px; height: 100px;" src="../Resources PGM/Icones/RH.png" alt="">
-      <p style="margin: 5px;">Evalue la criticité des produits chimiques utilisées par l'entreprise + fiches de sécurité
-      </p>
-      <button id="bt2" style="margin: 5px;">ACCIDENTS</button>
-
-
-      <?php if (isset($_SESSION['user']) && (intval($_SESSION['user']['role']) === 1 || intval($_SESSION['user']['role']) === 2 || intval($_SESSION['user']['role']) === 3)): ?>
-
-      <?php endif; ?>
-
-      <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          var button = document.getElementById("bt2");
-
-          button.addEventListener("click", function () {
-            window.location.href = "../Accidents/view_files.php"; //URL pour le lien
-          });
-        });
-      </script>
-    </div>
-
-    <div class="picto"
-      style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 41vh;">
-      <p style="margin-top:20px;margin-bottom:0px; color: #008080;">ACCIDENTS</p>
-      <p style="color: #008080;">ACCIDENTS</p>
-      <!-- <p style="color: #008080;">ACCIDENTS</p> -->
-      <img class="ico1" style="margin: 0px 0; width: 100px; height: 100px;" src="../Resources PGM/Icones/RH.png" alt="">
-      <p style="margin: 5px;">Evalue la criticité des produits chimiques utilisées par l'entreprise + fiches de sécurité
-      </p>
-      <button id="bt2" style="margin: 5px;">ACCIDENTS</button>
-
-
-      <?php if (isset($_SESSION['user']) && (intval($_SESSION['user']['role']) === 1 || intval($_SESSION['user']['role']) === 2 || intval($_SESSION['user']['role']) === 3)): ?>
-
-      <?php endif; ?>
-
-      <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          var button = document.getElementById("bt2");
-
-          button.addEventListener("click", function () {
-            window.location.href = "../Accidents/view_files.php"; //URL pour le lien
-          });
-        });
-      </script>
     </div>
   </div>
 
 
+  <!-- _______________________________________Pictogramme Produits Chimiques___________________________________ -->
 
-      
+  <div class="conteneur-groupe">
+    <div class="picto">
+      <P style="margin-left:50px; color:#008080">PRODUITS CHIMIQUES</P>
+      <img class="ico1" style="margin-top:6px; margin-bottom:0px; margin-left:40px; "
+        src="../Resources PGM/Icones/chimiques 1.png" alt="">
+      <p style="margin-bottom: 10px;">Evalue la criticité des produits chimiques utilisées par l'entreprise + fiches
+        de sécurité</p>
+
+      <?php if (isset($_SESSION['user']) && (intval($_SESSION['user']['role']) === 1 || intval($_SESSION['user']['role']) === 2 || intval($_SESSION['user']['role']) === 3)): ?>
+
+        <button id="bt6" style="margin-left:12px">PRODUITS CHIMIQUES</button>
+
+      <?php endif; ?>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          var button = document.getElementById("bt6");
+
+          button.addEventListener("click", function () {
+            window.location.href =
+              "../Produits_chimiques/view_files.php"; //URL pour le lien
+          });
+        });
+      </script>
+    </div>
+
+    <!-- _______________________________________Pictogramme Matériels___________________________________ -->
+
+    <div class="picto">
+      <P style="margin-left:45px; color:#008080">MATERIELS</P>
+      <img class="ico1" style="margin-top:22px; margin-bottom:0px; margin-left:40px; "
+        src="../Resources PGM/Icones/materiel.jpg" alt="">
+      <p style="margin-bottom:32px">Gestion des installations,des machines et des équipements</p>
+
+      <?php if (isset($_SESSION['user']) && (intval($_SESSION['user']['role']) === 1 || intval($_SESSION['user']['role']) === 2 || intval($_SESSION['user']['role']) === 3)): ?>
+
+        <button id="bt7" style="margin-left:42px">MATERIELS</button>
+
+      <?php endif; ?>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          var button = document.getElementById("bt7");
+
+          button.addEventListener("click", function () {
+            window.location.href = "../Materiels/view_files.php"; //URL pour le lien
+          });
+        });
+      </script>
+      </a>
+    </div>
+
+
+    <!-- _______________________________________Pictogramme Rapports Mensuels___________________________________ -->
+
+    <div class="picto">
+      <P style="margin-left:50px; color:#008080">RAPPORTS MENSUELS</P>
+      <img class="ico1" style="margin-top:6px; margin-bottom:0px; margin-left:40px; "
+        src="../Resources PGM/Icones/rapport 1.png" alt="">
+      <p style="margin-bottom: 65px;">Gestion des caisses</p>
+
+      <?php if (isset($_SESSION['user']) && (intval($_SESSION['user']['role']) === 1 || intval($_SESSION['user']['role']) === 2 || intval($_SESSION['user']['role']) === 3)): ?>
+
+        <button id="bt8" style="margin-left:20px">RAPPORTS MENSUELS</button>
+
+      <?php endif; ?>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          var button = document.getElementById("bt8");
+
+          button.addEventListener("click", function () {
+            window.location.href =
+              "../Rapports_mensuels/view_files.php"; //URL pour le lien
+          });
+        });
+      </script>
+
+    </div>
+
+
+    <!-- _______________________________________Pictogramme Divers___________________________________ -->
+    <div class="picto">
+      <P style="margin-left:45px; color:#008080">DIVERS</P>
+      <img class="ico1" style="margin-top:22px; margin-bottom:0px; margin-left:40px; "
+        src="../Resources PGM/Icones/divers.jpg" alt="">
+      <p style="margin-bottom:68px">Documents</p>
+
+      <?php if (isset($_SESSION['user']) && (intval($_SESSION['user']['role']) === 1 || intval($_SESSION['user']['role']) === 2 || intval($_SESSION['user']['role']) === 3)): ?>
+
+        <button id="bt9" style="margin-left:62px">DIVERS</button>
+
+      <?php endif; ?>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          var button = document.getElementById("bt9");
+
+          button.addEventListener("click", function () {
+            window.location.href = "../Divers/view_files.php"; //URL pour le lien
+          });
+        });
+      </script>
+      </a>
+    </div>
 </article>
 
 
